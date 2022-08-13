@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+
+        body{
+            background-image: linear-gradient(to top, rgb(15, 15, 141), black);
+            background-attachment: fixed;    
+        }
+
+        .main{
+            font: normal 15pt arial;
+            padding: 1px;
+            background-color: rgb(45, 158, 158);
+            text-align: center;
+            margin: auto;
+            margin-top: 100px;
+            height: 220px;
+            width: 600px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(45, 158, 158, 0.253);
+            border: 2px solid black;
+        }
+
+        input{
+            font: normal 15pt arial;
+            width: 100px;
+        }
+
+        .botao{
+            border-radius: 5px;
+            border: none;
+            padding: 2px;
+        }
+
+        #res {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1px;
+            margin:auto;
+            margin-top: 20px;
+            background-color: white;
+            width: 350px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Valor:">
+    <input type="number" name="txtn2" id="txtn2">
+    <input class="botao" type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+         }
+    </script>
+    </div>
+    
+</body>
+</html>
